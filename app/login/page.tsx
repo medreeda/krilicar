@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { FaFacebook } from "react-icons/fa";
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -21,7 +22,7 @@ const LoginPage = () => {
     e.preventDefault();
     const isAuthenticated = await mockAuthenticate(username, password);
     if (isAuthenticated) {
-      router.push('/admin');
+      router.push('/admindashbord');
     } else {
       setErrorMessage('Invalid credentials');
     }
@@ -59,8 +60,8 @@ const LoginPage = () => {
         </form>
         <a href="#" className="text-blue-500 mt-4" aria-label="Forgot Password">Forgot Password?</a>
         <div className="flex space-x-4 mt-4">
-          <a href="#"><img src="/facebook-icon.png" alt="Facebook" /></a>
-          <a href="#"><img src="/twitter-icon.png" alt="Twitter" /></a>
+        <a href="https://www.facebook.com/"><img src="/icons8-facebook-logo-100.png" alt="Facebook" className="w-12 h-12" /></a>
+          <a href="#"><img src="/icons8-twitter-50.png" alt="Twitter" className="w-12 h-12" /></a>
         </div>
       </div>
       <div className="hidden md:flex justify-center items-center w-full md:w-1/2 bg-gradient-to-r from-red-500 to-red-700 text-white">

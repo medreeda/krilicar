@@ -9,7 +9,7 @@ const NavBar = () => {
 
   return (
     <header className="w-full absolute z-10">
-      <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-black">
+      <nav className="max-w-[15000px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-black">
         <Link href="/" className="flex justify-center items-center">
           <Image
             src="/logo.png"
@@ -23,7 +23,7 @@ const NavBar = () => {
         <CustomButton
           handleClick={() => router.push('/login')} // ✅ الآن يعمل التوجيه بشكل صحيح
           title='LOGIN'
-          rightIcon='/login-icon.png'
+          rightIcon='/user2.png'
           btnType='button'
           containerStyles='text-white rounded-full bg-[#eb1c26] min-w-[130px]'
         />
