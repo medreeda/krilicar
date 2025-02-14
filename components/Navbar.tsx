@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import React from "react"; // Ensure React is imported if not already
+
 import Image from "next/image";
 import CustomButton from "./CustomButton";
 import { useRouter } from "next/navigation"; // ✅ الحل الصحيح
@@ -10,6 +12,8 @@ const NavBar = () => {
   return (
     <header className="w-full absolute z-10">
       <nav className="max-w-[15000px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-black">
+=======
+    
         <Link href="/" className="flex justify-center items-center">
           <Image
             src="/logo.png"
@@ -19,15 +23,24 @@ const NavBar = () => {
             className="object-contain"
           />
         </Link>
-        {/* Removed Admin Dashboard link */}
+        <ul className="flex-1 flex justify-center space-x-4 text-white">
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact Us</Link>
+          </li>
+        </ul>
         <CustomButton
-          handleClick={() => router.push('/login')} // ✅ الآن يعمل التوجيه بشكل صحيح
+          handleClick={() => router.push('/login')}
           title='LOGIN'
           rightIcon='/user2.png'
           btnType='button'
           containerStyles='text-white rounded-full bg-[#eb1c26] min-w-[130px]'
         />
-
       </nav>
     </header>
   );
