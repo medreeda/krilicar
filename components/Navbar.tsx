@@ -24,13 +24,13 @@ const NavBar = () => {
           />
         </Link>
         <ul className="flex-1 flex justify-center space-x-4 text-white">
-          <li>
+          <li className="text-base text-white-800 flex justify-center items-center cursor-pointer pb-1.5 transition-all hover:font-bold">
             <Link href="/">Home</Link>
           </li>
-          <li>
+          <li className="text-base text-white-800 flex justify-center items-center cursor-pointer pb-1.5 transition-all hover:font-bold" >
             <Link href="/about">About</Link>
           </li>
-          <li>
+          <li className="text-base text-white-800 flex justify-center items-center cursor-pointer pb-1.5 transition-all hover:font-bold">
             <Link href="/contact">Contact Us</Link>
           </li>
         </ul>
