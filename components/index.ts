@@ -4,7 +4,8 @@ import CustomFilter from "./CustomFilter";
 import Footer from "./Footer";
 import NavBar from "./Navbar";
 import ShowMore from "./ShowMore";
-import Login from "../app/login/page"; // Importing the new Login component
+import SignIn from "../app/sign-in/page"; // Importing the SignIn component
+
 import Hero from "./Hero"; // تأكد من استيراد مكون Hero
 import SearchBar from "./Searchbar"; 
 
@@ -16,6 +17,7 @@ export {
   NavBar,
   ShowMore,
   SearchBar,
-  Login,
+  SignIn,
+
   Hero, // تصدير Hero حتى يكون متاحًا للاستيراد
 };

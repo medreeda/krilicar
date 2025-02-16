@@ -1,20 +1,26 @@
-import "./globals.css";
-
-import { Footer, NavBar } from "/components";
+import './globals.css'
+import { ClerkProvider } from '@clerk/nextjs'
+import Layout from '../components/Layout/Layout'
 
 export const metadata = {
-  title: "KriliCar",
-  description: "Discover world's best car showcase application",
-};
+  title: 'KriliCar',
+  description: 'Discover world\'s best car showcase application',
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang='en'>
-      <body className='relative'>
-        <NavBar />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
+    <ClerkProvider>
+      <html lang="en">
+        <body>
+          <Layout>
+            {children}
+          </Layout>
+        </body>
+      </html>
+    </ClerkProvider>
+  )
 }

@@ -1,9 +1,11 @@
 "use client";
-import Link from "next/link";
-import React from "react"; // Ensure React is imported if not already
 
+import Link from "next/link";
+import React from "react";
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import CustomButton from "./CustomButton";
+
 import { useRouter } from "next/navigation"; // ✅ الحل الصحيح
 
 const NavBar = () => {
@@ -34,13 +36,17 @@ const NavBar = () => {
             <Link href="/contact">Contact Us</Link>
           </li>
         </ul>
-        <CustomButton
-          handleClick={() => router.push('/login')}
-          title='LOGIN'
-          rightIcon='/user2.png'
-          btnType='button'
-          containerStyles='text-white rounded-full bg-[#eb1c26] min-w-[130px]'
-        />
+          <div className="flex items-center gap-4">
+            <UserButton afterSignOutUrl="/" />
+            <CustomButton
+              title="Sign in"
+              btnType="button"
+              containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
+              onClick={() => window.location.href = '/sign-in'}
+
+            />
+          </div>
+
       </nav>
     </header>
   );
