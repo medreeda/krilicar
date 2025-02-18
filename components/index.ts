@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import CarCard from "./CarCard";
 import CustomFilter from "./CustomFilter";
 import Searchbar from "./Searchbar";
+import Testimonials from "./Testimonials";
 
 export {
   CustomButton,
@@ -14,4 +15,5 @@ export {
   CarCard,
   CustomFilter,
   Searchbar,
+  Testimonials,
 };
