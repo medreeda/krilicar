@@ -11,7 +11,7 @@ const SignUpPage = () => {
         {/* Left Side */}
         <div className="flex flex-col justify-center items-center w-full md:w-1/2 bg-gradient-to-r from-red-500 to-red-700 text-white p-8">
           <h1 className="text-4xl font-bold mb-4">Welcome Back!</h1>
-          <p className="mb-6">Please sign in to your account to continue.</p>
+          <p className="mb-6">Already have an account?</p>
           <a href="/sign-in" className="border border-white rounded-full px-4 py-2 mt-4">
             Sign In
           </a>

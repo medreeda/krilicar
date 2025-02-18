@@ -35,6 +35,9 @@ const NavBar = () => {
           <li className="text-base text-white-800 flex justify-center items-center cursor-pointer pb-1.5 transition-all hover:font-bold">
             <Link href="/contact">Contact Us</Link>
           </li>
+          <li className="text-base text-white-800 flex justify-center items-center cursor-pointer pb-1.5 transition-all hover:font-bold">
+            <Link href="/cars">Cars</Link>
+          </li>
         </ul>
           <div className="flex items-center gap-4">
             <UserButton afterSignOutUrl="/" />

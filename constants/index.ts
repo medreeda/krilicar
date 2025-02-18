@@ -1,26 +1,49 @@
+export const fuels = [
+  { title: "Gas", value: "gas" },
+  { title: "Electric", value: "electric" },
+  { title: "Diesel", value: "diesel" },
+  { title: "Hybrid", value: "hybrid" },
+];
+
+export const yearsOfProduction = [
+  { title: "Year", value: "" },
+  { title: "2015", value: "2015" },
+  { title: "2016", value: "2016" },
+  { title: "2017", value: "2017" },
+  { title: "2018", value: "2018" },
+  { title: "2019", value: "2019" },
+  { title: "2020", value: "2020" },
+  { title: "2021", value: "2021" },
+  { title: "2022", value: "2022" },
+  { title: "2023", value: "2023" },
+];
+
 export const footerLinks = [
   {
-    title: "Quick Links",
+    title: "About",
     links: [
-      { title: "Home", url: "/" },
-      { title: "About Us", url: "/about" },
-      { title: "Contact", url: "/contact" },
+      { title: "How it works", url: "/" },
+      { title: "Featured", url: "/" },
+      { title: "Partnership", url: "/" },
+      { title: "Bussiness Relation", url: "/" },
     ],
   },
   {
-    title: "Social Media",
+    title: "Company",
     links: [
-      { title: "Facebook", url: "https://facebook.com" },
-      { title: "Twitter", url: "https://twitter.com" },
-      { title: "Instagram", url: "https://instagram.com" },
+      { title: "Events", url: "/" },
+      { title: "Blog", url: "/" },
+      { title: "Podcast", url: "/" },
+      { title: "Invite a friend", url: "/" },
     ],
   },
   {
-    title: "Contact",
+    title: "Socials",
     links: [
-      { title: "Email", url: "mailto:info@krilicar.com" },
-      { title: "Phone", url: "tel:+1234567890" },
-      { title: "Address", url: "https://maps.google.com" },
+      { title: "Discord", url: "/" },
+      { title: "Instagram", url: "/" },
+      { title: "Twitter", url: "/" },
+      { title: "Facebook", url: "/" },
     ],
   },
 ];
