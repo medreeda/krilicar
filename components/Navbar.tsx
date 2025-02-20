@@ -43,7 +43,10 @@ const NavBar = () => {
         </button>
 
         {/* Logo - Center on small screens, Left on large screens */}
-        <Link href="/" className="flex justify-center items-center sm:justify-start sm:mr-auto">
+        <Link
+          href="/"
+          className="flex justify-center items-center sm:justify-start sm:mr-auto"
+        >
           <Image
             src="/logo.png"
             alt="logo"
@@ -60,7 +63,7 @@ const NavBar = () => {
               <Link href="/">Home</Link>
             </li>
             <li className="text-base text-white-800 cursor-pointer pb-1.5 transition-all hover:font-bold">
-              <Link href="/about">About</Link>
+              <Link href="/about">About Us</Link>
             </li>
             <li className="text-base text-white-800 cursor-pointer pb-1.5 transition-all hover:font-bold">
               <Link href="/contact">Contact Us</Link>
@@ -75,14 +78,15 @@ const NavBar = () => {
         <div className="flex items-center gap-4">
           {isSignedIn ? (
             <div className="relative w-12 h-12 rounded-full overflow-hidden transition-transform duration-300 ease-in-out hover:scale-110">
-              <UserButton 
+              <UserButton
                 afterSignOutUrl="/"
                 appearance={{
                   elements: {
                     avatarBox: "w-full h-full rounded-full aspect-square",
-                    userButtonAvatarBox: "w-full h-full rounded-full aspect-square",
-                    userButtonAvatarImage: "object-cover rounded-full"
-                  }
+                    userButtonAvatarBox:
+                      "w-full h-full rounded-full aspect-square",
+                    userButtonAvatarImage: "object-cover rounded-full",
+                  },
                 }}
               />
             </div>
@@ -97,13 +101,17 @@ const NavBar = () => {
         </div>
 
         {/* Mobile Navigation Links */}
-        <div className={`${isMenuOpen ? 'block' : 'hidden'} sm:hidden w-full absolute top-16 left-0 bg-[#f2f5f9] pl-6`}>
+        <div
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } sm:hidden w-full absolute top-16 left-0 bg-[#f2f5f9] pl-6`}
+        >
           <ul className="flex flex-col text-black">
             <li className="text-base text-white-800 py-2 cursor-pointer pb-1.5 transition-all hover:font-bold">
               <Link href="/">Home</Link>
             </li>
             <li className="text-base text-white-800 py-2 cursor-pointer pb-1.5 transition-all hover:font-bold">
-              <Link href="/about">About</Link>
+              <Link href="/about">About Us</Link>
             </li>
             <li className="text-base text-white-800 py-2 cursor-pointer pb-1.5 transition-all hover:font-bold">
               <Link href="/contact">Contact Us</Link>
