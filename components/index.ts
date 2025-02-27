@@ -2,7 +2,7 @@ import CustomButton from "./CustomButton";
 import Footer from "./Footer";
 import NavBar from "./Navbar";
 import Hero from "./Hero";
-import CarCard from "./CarCard";
+import CarCards from "./CarCards"; // Added CarCards import
 import CustomFilter from "./CustomFilter";
 import Searchbar from "./Searchbar";
 import Testimonials from "./Testimonials";
@@ -12,7 +12,7 @@ export {
   Footer,
   NavBar,
   Hero,
-  CarCard,
+  CarCards, // Added CarCards export
   CustomFilter,
   Searchbar,
   Testimonials,

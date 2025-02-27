@@ -1,13 +1,13 @@
 
+import { NavBar } from "components";
 import Image from "next/image";
-import { NavBar, Footer } from "/components";
 import { FaCar, FaShieldAlt, FaHeadset, FaClock, FaMapMarkedAlt, FaWallet } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <NavBar />
-      
+    
+    <NavBar showNavbar={true} />
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image

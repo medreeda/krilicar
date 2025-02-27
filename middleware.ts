@@ -1,7 +1,8 @@
 import { clerkMiddleware } from '@clerk/nextjs/server'
 
 const isPublicRoute = (path: string) => {
-  const publicRoutes = ['/', '/sign-in', '/signup', '/cars'];
+const publicRoutes = ['/', '/sign-in', '/signup', '/cars', '/payment'];
+
   return publicRoutes.includes(path);
 };
 

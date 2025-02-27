@@ -2,10 +2,11 @@ import Image from "next/image";
 import { NavBar, Footer } from "/components";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <NavBar />
+      <NavBar showNavbar={true} />
 
       {/* Hero Section with Image */}
       <div className="relative h-[400px] w-full">
@@ -38,9 +39,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Our Location</h3>
                     <p className="text-gray-600">
-                      
-KriliCar car rental agency ,
-Burmadiya district, Relizane province
+                      KriliCar car rental agency , Burmadiya district, Relizane
+                      province
                     </p>
                   </div>
                 </div>
@@ -169,7 +169,6 @@ Burmadiya district, Relizane province
           </div>
         </div>
       </div>
-
-          </div>
+    </div>
   );
 }

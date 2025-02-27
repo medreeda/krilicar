@@ -1,14 +1,36 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import { UserButton, useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import CustomButton from "./CustomButton";
-
 import { useRouter } from "next/navigation";
 
-const NavBar = () => {
+interface NavBarProps {
+  showNavbar: boolean;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ showNavbar }) => {
+  const [isVisible, setIsVisible] = useState(true);
+  let lastScrollY = typeof window !== 'undefined' ? window.scrollY : 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== 'undefined') {
+        const currentScrollY = window.scrollY;
+        setIsVisible(lastScrollY > currentScrollY || currentScrollY < 10);
+        lastScrollY = currentScrollY;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const router = useRouter();
   const { isSignedIn } = useUser();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,9 +39,12 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  if (!isVisible) return null;
+
+
   return (
-    <header className="w-full absolute z-10">
-      <nav className="max-w-[15000px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-[#f2f5f9]">
+    <header className="w-full fixed top-0 left-0 z-10 bg-[#f2f5f9] shadow-md">
+      <nav className="max-w-[1500px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4">
         {/* Hamburger Menu Icon - Left */}
         <button
           onClick={toggleMenu}
@@ -71,6 +96,9 @@ const NavBar = () => {
             <li className="text-base text-white-800 cursor-pointer pb-1.5 transition-all hover:font-bold">
               <Link href="/cars">Cars</Link>
             </li>
+            <li className="text-base text-white-800 cursor-pointer pb-1.5 transition-all hover:font-bold">
+              <Link href="/payment">Payment</Link>
+            </li>
           </ul>
         </div>
 
@@ -118,6 +146,9 @@ const NavBar = () => {
             </li>
             <li className="text-base text-white-800 py-2 cursor-pointer pb-1.5 transition-all hover:font-bold">
               <Link href="/cars">Cars</Link>
+            </li>
+            <li className="text-base text-white-800 py-2 cursor-pointer pb-1.5 transition-all hover:font-bold">
+              <Link href="/payment">Payment</Link>
             </li>
           </ul>
         </div>

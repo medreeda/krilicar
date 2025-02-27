@@ -11,12 +11,13 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="layout">
-      <NavBar />
-      <Sidebar />
-      <div className="main__layout">
-        <TopNav />
-        <div className="content">
-          {children}
+      <NavBar showNavbar={true} />
+      <div className="flex">
+       
+        <Sidebar />
+        <div className="main__layout flex-1 pt-[80px]">
+          <TopNav />
+          <div className="content">{children}</div>
         </div>
       </div>
       <Footer />
