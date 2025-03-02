@@ -90,31 +90,31 @@ const PaymentComponent = () => {
                   <h3 className="text-lg font-bold text-gray-800">Choose Your Payment Method</h3>
                   <div className="flex flex-col space-y-2">
                     <div className="border rounded-lg p-4 flex items-center cursor-pointer" onClick={() => handlePaymentMethodChange('visa')}>
-                      <img src="/icons/visa.png" alt="Visa" className="w-12 h-12 mr-4" />
+                      <img src="./visaa.png" alt="Visa" className="w-12 h-12 mr-4" />
                       <span>Visa</span>
                     </div>
                     <div className="border rounded-lg p-4 flex items-center cursor-pointer" onClick={() => handlePaymentMethodChange('mastercard')}>
-                      <img src="/icons/mastercard.png" alt="MasterCard" className="w-12 h-12 mr-4" />
+                      <img src="./mastercard.png" alt="MasterCard" className="w-12 h-12 mr-4" />
                       <span>MasterCard</span>
                     </div>
                     <div className="border rounded-lg p-4 flex items-center cursor-pointer" onClick={() => handlePaymentMethodChange('paypal')}>
-                      <img src="/icons/paypal.png" alt="PayPal" className="w-12 h-12 mr-4" />
+                      <img src="./paypal48.png" alt="PayPal" className="w-12 h-12 mr-4" />
                       <span>PayPal</span>
                     </div>
                     <div className="border rounded-lg p-4 flex items-center cursor-pointer" onClick={() => handlePaymentMethodChange('algerian_card')}>
-                      <img src="/icons/algerian_card.png" alt="Algerian Card" className="w-12 h-12 mr-4" />
+                      <img src="./edahbia.png" alt="Algerian Card" className="w-12 h-12 mr-4" />
                       <span>Algerian Golden Card</span>
                     </div>
                     <div className="border rounded-lg p-4 flex items-center cursor-pointer" onClick={() => handlePaymentMethodChange('ccp')}>
-                      <img src="/icons/ccp.png" alt="CCP" className="w-12 h-12 mr-4" />
+                      <img src="./ccp.png" alt="CCP" className="w-12 h-12 mr-4" />
                       <span>CCP</span>
                     </div>
                     <div className="border rounded-lg p-4 flex items-center cursor-pointer" onClick={() => handlePaymentMethodChange('baridi_mob')}>
-                      <img src="/icons/baridi_mob.png" alt="Baridi Mob" className="w-12 h-12 mr-4" />
+                      <img src="./Baridiweb-logo.png" alt="Baridi Mob" className="w-12 h-12 mr-4" />
                       <span>Baridi Mob</span>
                     </div>
                     <div className="border rounded-lg p-4 flex items-center cursor-pointer" onClick={() => handlePaymentMethodChange('cash_on_delivery')}>
-                      <img src="/icons/cash_on_delivery.png" alt="Cash on Delivery" className="w-12 h-12 mr-4" />
+                      <img src="./cash-on-delivery.png" alt="Cash on Delivery" className="w-12 h-12 mr-4" />
                       <span>Cash on Delivery</span>
                     </div>
                   </div>
